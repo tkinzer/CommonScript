@@ -1,4 +1,4 @@
-var assert = require("assert");
+var assert = require("lib/assert");
 
 function block() {
     require("submodule/a");

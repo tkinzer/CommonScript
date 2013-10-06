@@ -1,5 +1,4 @@
-var assert = require("assert");
-
+var assert = require("lib/assert");
 var a = require("submodule/a");
 var b = require("submodule/b");
 

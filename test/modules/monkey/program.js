@@ -1,5 +1,4 @@
-var assert = require("assert");
-
+var assert = require("lib/assert");
 var a = require("a");
 
 exports['test module monkey'] = function() {
