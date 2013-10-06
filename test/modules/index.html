@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CommonScript - Test Modules</title>
+    <script src="../../lib/modules.js" type="text/javascript"></script>
+    <script type="text/javascript">
+	var path = require.path = require.path.split("/").slice(0, -3).join("/") + "/";
+	var test, program, unit = ["absolute", "cyclic", "determinism", "exactExports",
+		"hasOwnProperty", "method", "missing", "monkey", "nested", "relative",
+		"transitive"];
+
+	for(var i = 0, l = unit.length; i < l; i++) {
+		test = require("lib/test");
+		require.path = path + "test/modules/" + unit[i] + "/";
+		program = require("program");
+		console.log("Failures on test unit \"" + unit[i] + "\": " + test.run(program));
+		require.path = path;
+		require.clear();
+	}
+    </script>
+  </head>
+  <body>
+    <p>Test Modules. See JavaScript console.</p>
+  </body>
+</html>
