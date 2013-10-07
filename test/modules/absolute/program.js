@@ -1,7 +1,7 @@
 /*
 var path = window.require.path;
 
-window.require.path = window.require.path.split("/").slice(0, -4).join("/") + "/";
+window.require.path = path.split("/").slice(0, -4).join("/") + "/";
 
 var assert = require("lib/assert");
 
